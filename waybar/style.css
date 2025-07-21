@@ -1,0 +1,158 @@
+@define-color accent_color #6bb9f0;
+@define-color warning_color #ffe156;
+@define-color critical_color #ff6f61;
+
+* {
+    border: none;
+    border-radius: 8;
+    
+    min-height: 0;
+    
+    font-family: JetBrainsMonoNLNerdFont, Noto Sans;
+    font-weight: bold;
+    font-size: 14px;
+    
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+    background: transparent;
+}
+
+window#waybar {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25)0%, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.6)60%);
+    padding: 0px;
+    
+    border-radius: 12px;
+    border-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+tooltip {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15)0%, rgba(0, 0, 0, 0.4)50%, rgba(0, 0, 0, 0.5)55%);
+    color: white;
+
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-top-color: rgba(255, 255, 255, 0.4);
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+tooltip label {
+    color: white;
+}
+
+#taskbar {
+    margin: 4px 8px;
+    margin-left: 8px;
+    color: white;
+}
+#taskbar button {
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 2px 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+
+    border-radius: 4px;
+    border-style: none;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+    border-top-color: rgba(255, 255, 255, 0.3);
+}
+#taskbar button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.4));
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+#taskbar button.active {
+    background-image: linear-gradient(to bottom, rgba(0, 255, 255, 0.6), rgba(0, 100, 100, 0.1));
+}
+
+#custom-power,
+#custom-reboot,
+#custom-lock,
+#custom-quit,
+#workspaces,
+#clock,
+#tray,
+#language,
+#bluetooth,
+#network,
+#pulseaudio,
+#battery {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.025));
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.34);
+    margin: 4px;
+    padding: 4px 8px;
+    color: rgb(220, 220, 220);
+
+    border-radius: 8px;
+    border-style: none;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+    border-top-color: rgba(255, 255, 255, 0.3);
+}
+
+#tray menu {
+    background-color: rgba(255, 255, 255, 0.025);
+    color: rgb(220, 220, 220);
+    padding: 4px;
+}
+#tray menu menuitem {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+    color: rgb(220, 220, 220);
+    margin: 3px;
+
+    border-radius: 4px;
+    border-style: none;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+    border-top-color: rgba(255, 255, 255, 0.3);
+}
+#tray menu menuitem:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 255, 255, 0.15), rgba(0, 0, 0, 0.3), rgba(0, 255, 255, 0.15));
+    color: @accent_color;
+    text-shadow: 0px 0px 6px @accent_color;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+#workspaces button {
+    transition-duration: 100ms;
+    all: initial;
+    min-width: 0;
+    color: rgb(220, 220, 220);
+    margin-left: 6px;
+    margin-right: 6px;
+    text-shadow: 0px 0px 4px rgb(135, 135, 135);
+}
+#workspaces button.active {
+    color: @accent_color;
+    text-shadow: 0px 0px 6px @accent_color;
+}
+#workspaces button:hover {
+    transition-duration: 250ms;
+    color: @accent_color;
+    text-shadow: 0px 0px 8px @accent_color;
+}
+#workspaces button.current_output {
+    color: @accent_color;
+}
+#workspaces button.urgent {
+    color: @warning_color;
+    text-shadow: 0px 0px 6px #e78a4e;
+}
+
+#battery.warning {
+    color: @warning_color;
+}
+#battery.critical {
+    color: @critical_color;
+}
