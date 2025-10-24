@@ -10,8 +10,8 @@
  
     "margin-left": 24,
     "margin-right": 24,
-    "margin-top": 8,
-    "margin-bottom": 0,
+    "margin-top": 6,
+    "margin-bottom": -4,
 
     "modules-left": [
         "group/group-power",
@@ -60,7 +60,7 @@
     "custom/lock": {
         "format": "",
         "tooltip": false,
-        "on-click": "swaylock --color 6bb9f0"
+        "on-click": "hyprlock"
     },
     "custom/quit": {
         "format": "󰈆",

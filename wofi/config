@@ -7,6 +7,5 @@ insensitive=false
 allow_markup=true
 allow_images=true
 line_wrap=word
-lines=10
 width=30%
 hide_scroll=true
