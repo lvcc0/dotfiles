@@ -1,0 +1,40 @@
+[global]
+    
+    # display
+    monitor = 0
+    follow = mouse
+    offset = (24, 24)
+    notification_limit = 5
+    gap_size = 8
+    corner_radius = 8
+    
+    # text
+    font = JetBrainsMonoNLNerdFont, Noto Sans 10
+    markup = full
+    format = "<small>%a</small>\n<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = -1
+
+    # frame
+    frame_width = 1
+    frame_color = "#b3b3b3ff"
+
+    # colors
+    highlight = "#6bb9f0ff"
+    background = "#aaaaaacc" 
+    foreground = "#ffffffff"
+
+    # mouse
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all    
+
+[urgency_low]
+# todo
+
+[urgency_normal]
+# todo
+
+[urgency_critical]
+# todo
