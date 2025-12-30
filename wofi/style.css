@@ -1,7 +1,8 @@
 * {
     font-family: JetBrainsMonoNLNerdFont;
     color: #ffffff;
-    background: transparent;
+    background: none;
+    border: none;
 }
 
 #window {
@@ -18,7 +19,11 @@
 #input {
     padding: 10px;
     margin: 8px;
-    background-image: linear-gradient(to top, rgba(90, 90, 90, 0.6), rgba(35, 35, 35, 0.8));
+    background-image: linear-gradient(
+        to top,
+        rgba(90, 90, 90, 0.6),
+        rgba(35, 35, 35, 0.8)
+    );
     box-shadow: inset 0px -5px 8px rgba(0, 0, 0, 0.4);
 
     border-radius: 8px;
@@ -29,7 +34,6 @@
 
 #outer-box {
     padding: 0px;
-    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 1);
 }
 
 #inner-box {
@@ -41,7 +45,12 @@
     margin: 4px;
     margin-left: 8px;
     margin-right: 8px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3)0%, rgba(20, 20, 20, 0.2)50%, rgba(0, 0, 0, 0.3)50%);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(20, 20, 20, 0.2) 50%,
+        rgba(0, 0, 0, 0.3) 50%
+    );
 
     border-radius: 8px;
     border-width: 1px;
