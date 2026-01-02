@@ -11,4 +11,4 @@ if [ ! -d "$1" ]; then
 fi
 
 cp -r $HOME/.config/{dunst,hypr,kitty,scripts,wallpapers,waybar,wofi} $1
-
+cp /etc/ly/config.ini $1/ly
