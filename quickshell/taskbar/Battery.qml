@@ -23,7 +23,7 @@ Row {
     }
 
     Text {
-        visible: UPower.displayDevice.onBattery > 0
+        visible: UPower.displayDevice.timeToEmpty > 0
         text: "(" + Math.floor(UPower.displayDevice.timeToEmpty / 60) + "m)"
         color: Config.colors.text
         

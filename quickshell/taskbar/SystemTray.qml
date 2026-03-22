@@ -14,7 +14,7 @@ RowLayout {
 
     anchors {
         right: parent.right
-        rightMargin: 12
+        rightMargin: 14
         verticalCenter: parent.verticalCenter
     }
 

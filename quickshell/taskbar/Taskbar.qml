@@ -158,7 +158,7 @@ Variants {
                 // system tray box
                 TaskbarBox {
                     id: systemTrayBody
-                    width: systemTray.width + 22
+                    width: systemTray.width + 24
 
                     SystemTray {
                         id: systemTray

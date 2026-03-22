@@ -20,7 +20,7 @@ if [ ! -d "$1" ]; then
     exit 1
 fi
 
-CONFIG_DIRS=("dunst" "hypr" "kitty" "scripts" "wallpapers" "quickshell" "wofi")
+CONFIG_DIRS=("dunst" "fastfetch" "hypr" "kitty" "quickshell" "scripts" "wallpapers" "wofi")
 
 read -r -p "This will copy current config directories to \"$1\". Continue? [Y/n] " yn
 if [[ "$yn" =~ ^([nN][oO]|[nN])$ ]] ; then

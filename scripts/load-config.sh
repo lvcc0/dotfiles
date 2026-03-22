@@ -15,7 +15,7 @@ print() {
 
 PKGDIR="$( cd -- "$(dirname "$0")/.." >/dev/null 2>&1; pwd -P )"
 DOTS_DIR="$HOME/.config"
-CONFIG_DIRS=("dunst" "hypr" "kitty" "scripts" "wallpapers" "quickshell" "wofi")
+CONFIG_DIRS=("dunst" "fastfetch" "hypr" "kitty" "quickshell" "scripts" "wallpapers" "wofi")
 
 echo "This script will overwrite $DOTS_DIR with the files this script is packaged with ($PKGDIR)."
 echo "Following directories will be overwritten:"
