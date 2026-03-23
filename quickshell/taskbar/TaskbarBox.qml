@@ -5,7 +5,7 @@ import ".."
 
 Item {
     id: box
-    height: parent.height - 6
+    height: parent.height - 8
 
     anchors.verticalCenter: parent.verticalCenter
 

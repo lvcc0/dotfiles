@@ -10,6 +10,13 @@ import "Workspaces.qml"
 import "SystemTray.qml"
 import "Battery.qml"
 import "Language.qml"
+import "NetworkMonitor.qml"
+
+// todo: add icons?
+// todo: volume bar
+// todo: brightness bar
+// todo: bluetooth
+// todo: taskbar opened programs
 
 Scope {
 
@@ -33,7 +40,7 @@ Variants {
                 right: true
             }
 
-            implicitHeight: 32
+            implicitHeight: 36
             
             // --- taskbar body --- //
             Item {
@@ -65,7 +72,7 @@ Variants {
                         margins: 1
                     }
                     
-                    height: 2
+                    height: 3
                     color: Config.colors.shadow
                 }
 
@@ -78,7 +85,7 @@ Variants {
                         margins: 1
                     }
 
-                    width: 2
+                    width: 3
                     color: Config.colors.shadow
                 }
 
@@ -91,7 +98,7 @@ Variants {
                         margins: 1
                     }
 
-                    height: 2
+                    height: 3
                     color: Config.colors.highlight
                 }
             }
@@ -135,6 +142,15 @@ Variants {
                     verticalCenter: parent.verticalCenter
                 }
                 
+                TaskbarBox {
+                    id: networkMonitorBody
+                    width: networkMonitor.width + 16
+
+                    NetworkMonitor {
+                        id: networkMonitor
+                    }
+                }
+
                 // keyboard layout
                 TaskbarBox {
                     id: languageBody

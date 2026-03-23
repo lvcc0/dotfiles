@@ -7,6 +7,7 @@ import "taskbar" as Taskbar
 // todo: options menu
 // todo: system resources gui
 // todo: super+tab switcher
+// todo: calendar widget
 
 Scope {
     id: root
