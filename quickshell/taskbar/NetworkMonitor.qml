@@ -39,7 +39,7 @@ Text {
                     let curBytes = parseInt(parts[1]);
 
                     if (lastBytes > 0) {
-                        downSpeed = (curBytes - lastBytes) / 1024;
+                        downSpeed = (curBytes - lastBytes) / 1024 / 5;
                     }
 
                     lastBytes = curBytes;
@@ -50,7 +50,7 @@ Text {
     }
 
     Timer {
-        interval: 1000
+        interval: 5000
         running: true
         repeat: true
 

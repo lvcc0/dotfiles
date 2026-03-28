@@ -131,6 +131,27 @@ Variants {
             }
             // --- //
 
+            // --- middle widgets --- //
+            Row {
+                spacing: 8
+                height: parent.height
+
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
+
+                TaskbarBox {
+                    id: clockBody
+                    width: clock.width + 24
+
+                    Clock {
+                        id: clock
+                    }
+                }
+            }
+            // --- //
+
             // --- right widgets --- //
             Row {
                 spacing: 8
@@ -142,6 +163,7 @@ Variants {
                     verticalCenter: parent.verticalCenter
                 }
                 
+                // network monitor
                 TaskbarBox {
                     id: networkMonitorBody
                     width: networkMonitor.width + 16
@@ -161,16 +183,6 @@ Variants {
                     }
                 }
 
-                // battery box
-                TaskbarBox {
-                    id: batteryBody
-                    width: battery.width + 8
-
-                    Battery {
-                        id: battery
-                    }
-                }
-
                 // system tray box
                 TaskbarBox {
                     id: systemTrayBody
@@ -182,8 +194,8 @@ Variants {
                 }
             }
             // --- //
-        } // PanelWindow
-    } // Item
-} // Variants
+        }
+    }
+}
 
 }

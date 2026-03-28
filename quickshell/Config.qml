@@ -6,6 +6,7 @@ import QtQuick
 
 // todo: more themes
 // todo: theme changer gui
+// todo: some more settings (+gui)
 
 Singleton {
     id: root

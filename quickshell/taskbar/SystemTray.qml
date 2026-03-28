@@ -10,11 +10,11 @@ import "Clock.qml"
 
 RowLayout {
     id: systemTray
-    spacing: 6
+    spacing: 8
 
     anchors {
         right: parent.right
-        rightMargin: 14
+        rightMargin: 12
         verticalCenter: parent.verticalCenter
     }
 
@@ -99,8 +99,7 @@ RowLayout {
         }
     }
 
-    Clock {
-        id: clock
+    Battery {
+        id: battery
     }
-
 }

@@ -5,7 +5,7 @@ import QtQuick
 import ".."
 
 Text {
-    property string currentLayout: "English (US)"
+    property string currentLayout: "en"
 
     text: currentLayout
     color: Config.colors.text
@@ -27,7 +27,16 @@ Text {
         running: true
 
         stdout: StdioCollector {
-            onStreamFinished: currentLayout = this.text
+            onStreamFinished: {
+                switch (this.text) {
+                case "English (US)\n":
+                    currentLayout = "en"
+                    break;
+                case "Russian\n":
+                    currentLayout = "ru"
+                    break;
+                }
+            }
         }
     }
 

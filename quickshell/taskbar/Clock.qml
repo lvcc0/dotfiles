@@ -6,6 +6,11 @@ Text {
     text: Time.time
     color: Config.colors.text
 
+    anchors {
+        horizontalCenter: parent.horizontalCenter
+        verticalCenter: parent.verticalCenter
+    }
+
     horizontalAlignment: Text.AlignHCenter
     verticalAlignment: Text.AlignVCenter
 

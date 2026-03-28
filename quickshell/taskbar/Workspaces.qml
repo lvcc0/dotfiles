@@ -6,9 +6,6 @@ import QtQuick.Layouts
 
 import ".."
 
-// todo: fix 10th workspace
-// todo: fix super workspace (-98)
-
 RowLayout {
     id: workspaces
     spacing: 2
@@ -18,7 +15,7 @@ RowLayout {
         verticalCenter: parent.verticalCenter
     }
 
-    property var currentWorkspaces: Hyprland.workspaces.values.filter(x => x.monitor.name == taskbar.screen.name)
+    property var currentWorkspaces: Hyprland.workspaces.values.filter(x => x.monitor.name == taskbar.screen.name && x.id > 0)
 
     Repeater {
         model: parent.currentWorkspaces
@@ -93,7 +90,7 @@ RowLayout {
                 width: 10
                 height: 10
 
-                text: modelData.id
+                text: modelData.id % 10
                 color: Config.colors.text
 
                 font {
