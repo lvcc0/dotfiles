@@ -1,7 +1,7 @@
-# --- #
-# Plugins config
-# https://wiki.hypr.land/Plugins/
-# --- #
+-- Plugins config
+-- https://wiki.hypr.land/Plugins/
+
+--[[
 
 plugin {
 
@@ -14,3 +14,5 @@ hyprbars {
 }
 
 }
+
+]]

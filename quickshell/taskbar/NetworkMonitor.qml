@@ -10,6 +10,8 @@ Text {
     property real downSpeed: 0
     property var lastBytes: 0
 
+    property bool running: true;
+
     text: downSpeed.toFixed(1) + "kb/s"
     color: Config.colors.text
 
@@ -39,7 +41,7 @@ Text {
                     let curBytes = parseInt(parts[1]);
 
                     if (lastBytes > 0) {
-                        downSpeed = (curBytes - lastBytes) / 1024 / 5;
+                        downSpeed = (curBytes - lastBytes) / 1024;
                     }
 
                     lastBytes = curBytes;
@@ -49,11 +51,24 @@ Text {
         }
     }
 
+    Process {
+        id: connectionProcess
+        command: ["nmcli", "radio", "wifi"]
+        stdout: SplitParser {
+            onRead: data => {
+                running = (data.trim() === "enabled");
+            }
+        }
+    }
+
     Timer {
         interval: 5000
         running: true
         repeat: true
 
-        onTriggered: networkProcess.running = true
+        onTriggered: {
+            connectionProcess.running = true;
+            networkProcess.running = parent.running;
+        }
     }
 }

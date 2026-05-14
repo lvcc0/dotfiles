@@ -165,6 +165,8 @@ Variants {
                 
                 // network monitor
                 TaskbarBox {
+                    visible: networkMonitor.running
+
                     id: networkMonitorBody
                     width: networkMonitor.width + 16
 
