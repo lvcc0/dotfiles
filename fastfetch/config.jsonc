@@ -1,0 +1,130 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  
+  "logo": {
+    "source": "lainos",
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 3
+    }
+  },
+  
+  "display": {
+    "separator": " "
+  },
+  
+  "modules": [
+    {
+      "type": "title",
+      "key": "  "
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "╭─",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "kernel",
+      "key": "├─",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "de",
+      "key": "├─",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "wm",
+      "key": "├─",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "packages",
+      "key": "╰─",
+      "keyColor": "magenta"
+    },
+    "break",
+    {
+      "type": "terminalfont",
+      "key": "╭─",
+      "keyColor": "green"
+    },
+    {
+      "type": "terminal",
+      "key": "├─",
+      "keyColor": "green"
+    },
+    {
+      "type": "shell",
+      "key": "╰─",
+      "keyColor": "green"
+    },
+    "break",
+    {
+      "type": "host",
+      "key": "╭─",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "cpu",
+      "key": "├─",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "gpu",
+      "key": "├─",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "memory",
+      "key": "├─",
+      "keyColor": "yellow",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    {
+      "type": "disk",
+      "key": "├─",
+      "keyColor": "yellow",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      }
+    },
+    {
+      "type": "localip",
+      "key": "├─",
+      "keyColor": "yellow",
+      "showIpv4": true,
+      "showMac": true
+    },
+    {
+      "type": "battery",
+      "key": "├─",
+      "keyColor": "yellow",
+      "percent": {
+        "green": 50,
+        "yellow": 20,
+        "type": 0
+      }
+    },
+    {
+      "type": "uptime",
+      "key": "╰─",
+      "keyColor": "yellow"
+    },
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 3,
+      "symbol": "diamond"
+    },
+    "break"
+  ]
+}
