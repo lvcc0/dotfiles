@@ -33,12 +33,14 @@ hl.bind("SUPER + RETURN", hl.dsp.layout("togglesplit"))
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(),   { mouse = true, })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true, })
 
+hl.bind("ALT + tab", hl.dsp.window.cycle_next())
+
 for i = 1, 4 do
     local keys = { "left", "down", "up", "right", }
     
     local res = 32
     local xres = { -res, 0,    0,   res, }
-    local yres = {  0,   res, -res, 0,  }
+    local yres = {  0,   res, -res, 0,   }
 
     -- move focus
     hl.bind("SUPER + " .. keys[i], hl.dsp.focus({ direction = keys[i], }))

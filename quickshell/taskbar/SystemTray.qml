@@ -6,7 +6,6 @@ import QtQuick.Layouts
 import QtQuick.Effects
 
 import ".."
-import "Clock.qml"
 
 RowLayout {
     id: systemTray
@@ -99,7 +98,16 @@ RowLayout {
         }
     }
 
-    Battery {
-        id: battery
+    Row {
+        spacing: 4
+
+        Volume {
+            id: volume
+        }
+
+        Battery {
+            id: battery
+        }
     }
+
 }

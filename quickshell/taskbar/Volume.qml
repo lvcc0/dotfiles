@@ -1,14 +1,21 @@
 import Quickshell
-import Quickshell.Services.UPower
+import Quickshell.Services.Pipewire
 import QtQuick
 
 import ".."
 
 Row {
+    property PwNode node: Pipewire.defaultAudioSink; 
+
     spacing: 4
-    
+    visible: !node.audio.muted
+
+    PwObjectTracker {
+        objects: [ node ]
+    }
+
     Rectangle {
-        id: batteryRect
+        id: volumeRect
         color: "transparent"
 
         width: 8
@@ -20,13 +27,13 @@ Row {
         }
 
         Rectangle {
-            color: UPower.displayDevice.percentage > 0.3 ? Config.colors.accent : Config.colors.urgent 
+            color: Config.colors.accent 
             z: -1
 
             anchors.bottom: parent.bottom
 
             width: parent.width
-            height: parent.height * (UPower.displayDevice.percentage)
+            height: parent.height * (node.audio.volume)
         }
 
         MouseArea {
@@ -74,21 +81,7 @@ Row {
                 }
 
                 Text {
-                    text: `${Math.round(UPower.displayDevice.percentage * 100)}%`
-                    color: Config.colors.text
-                    
-                    font.pixelSize: 12
-
-                    font {
-                        family: fontMonaco.name
-                        pixelSize: 12
-                    }
-                }
-
-                Text {
-                    visible: UPower.displayDevice.timeToEmpty > 0
-
-                    text: `(${Math.round(UPower.displayDevice.timeToEmpty / 60)}m)`
+                    text: `${Math.round(node.audio.volume * 100)}%`
                     color: Config.colors.text
                     
                     font.pixelSize: 12

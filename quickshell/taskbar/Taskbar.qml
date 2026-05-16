@@ -4,16 +4,8 @@ import Quickshell.Io
 import QtQuick
 
 import ".."
-import "TaskbarBox.qml"
-
-import "Workspaces.qml"
-import "SystemTray.qml"
-import "Battery.qml"
-import "Language.qml"
-import "NetworkMonitor.qml"
 
 // todo: add icons?
-// todo: volume bar
 // todo: brightness bar
 // todo: bluetooth
 // todo: taskbar opened programs
