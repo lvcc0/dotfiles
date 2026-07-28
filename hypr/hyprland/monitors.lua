@@ -10,7 +10,6 @@ hl.monitor({
 })
 
 -- mirrored display
---[[
 hl.monitor({
     output   = "",
     mode     = "preferred",
@@ -18,5 +17,4 @@ hl.monitor({
     scale    = 1,
     mirror   = "eDP-1",
 })
-]]
 

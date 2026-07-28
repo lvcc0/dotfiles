@@ -1,5 +1,8 @@
-import Quickshell
 import QtQuick
+import Quickshell
+
+import QtQuick.Layouts
+import Quickshell.Wayland
 
 import "taskbar" as Taskbar
 
@@ -9,7 +12,7 @@ import "taskbar" as Taskbar
 // todo: super+tab switcher
 // todo: calendar widget
 
-Scope {
+ShellRoot {
     id: root
 
     FontLoader {
@@ -19,3 +22,4 @@ Scope {
 
     Taskbar.Taskbar {}
 }
+
