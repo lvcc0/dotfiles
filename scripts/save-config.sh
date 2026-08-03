@@ -20,7 +20,7 @@ if [ ! -d "$1" ]; then
     exit 1
 fi
 
-CONFIG_DIRS=("fastfetch" "kitty" "scripts" "sway" "wallpapers")
+CONFIG_DIRS=("fastfetch" "kitty" "mako" "scripts" "sway" "wallpapers")
 
 read -r -p "This will copy current config directories to \"$1\". Continue? [Y/n] " yn
 if [[ "$yn" =~ ^([nN][oO]|[nN])$ ]] ; then
@@ -29,9 +29,9 @@ if [[ "$yn" =~ ^([nN][oO]|[nN])$ ]] ; then
 fi
 
 for dir in "${CONFIG_DIRS[@]}" ; do
-    if cp -r $HOME/.config/$dir $1 ; then
-        print "$GREEN" "[v] copied $dir to $1"
+    if rm -rf $1/$dir && cp -r $HOME/.config/$dir $1 ; then
+        print "$GREEN" "[v] updated $dir"
     else
-        print "$RED" "[x] could not copy $dir to $1"
+        print "$RED" "[x] could not copy $1"
     fi
 done

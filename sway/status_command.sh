@@ -1,5 +1,5 @@
 # date & time
-DATE=$(date "+%d/%m/%y (w%-V)")
+DATE=$(date "+%a %d.%m.%y %H:%M:%S")
 TIME=$(date "+%H:%M")
 
 # battery
